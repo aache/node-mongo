@@ -1,0 +1,19 @@
+{
+  "name": "mongo-project",
+  "version": "1.0.0",
+  "description": "code for integration of mongo with node ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aache/node-mongo.git"
+  },
+  "author": "Mohd Aaqib",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aache/node-mongo/issues"
+  },
+  "homepage": "https://github.com/aache/node-mongo#readme"
+}
