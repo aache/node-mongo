@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/aache/node-mongo/issues"
   },
-  "homepage": "https://github.com/aache/node-mongo#readme"
+  "homepage": "https://github.com/aache/node-mongo#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongodb": "^3.3.0-beta2"
+  }
 }
