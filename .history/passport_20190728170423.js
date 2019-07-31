@@ -10,7 +10,7 @@ module.exports  = function(passport){
     });
 
     passport.use(new localStrategy(function(username,password,done){
-        console.log("Authenticating ::");
+        console.log("Breakpoint : 1 :");
         console.log(username,password);
         User.findOne({username:username},function(err, doc){
             if(err){

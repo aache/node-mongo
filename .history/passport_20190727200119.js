@@ -10,7 +10,6 @@ module.exports  = function(passport){
     });
 
     passport.use(new localStrategy(function(username,password,done){
-        console.log("Authenticating ::");
         console.log(username,password);
         User.findOne({username:username},function(err, doc){
             if(err){
@@ -23,8 +22,6 @@ module.exports  = function(passport){
                             username : doc.username , 
                             password : doc.password 
                         })
-                    }else{
-                        done(null , false)
                     }
                     
                 }else{

@@ -32,7 +32,7 @@ module.exports = function (passport) {
     });
     
     router.post('/login',passport.authenticate('local'), function(req,res){
-        res.send(req.user);
+        
     });
     return router;
 }

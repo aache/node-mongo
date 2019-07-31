@@ -18,7 +18,7 @@ module.exports = function (passport) {
                 }else {
                     var record = new User();
                         record .username = username ;    
-                        record .password = record.hashPassword(password) ;
+                        record .password = password ;
                         record .save(function(err,user){
                             if(err){
                                 res.status(500).send("error registering user")
@@ -32,7 +32,7 @@ module.exports = function (passport) {
     });
     
     router.post('/login',passport.authenticate('local'), function(req,res){
-        res.send(req.user);
+        
     });
     return router;
 }

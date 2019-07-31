@@ -10,23 +10,13 @@ module.exports  = function(passport){
     });
 
     passport.use(new localStrategy(function(username,password,done){
-        console.log("Authenticating ::");
         console.log(username,password);
         User.findOne({username:username},function(err, doc){
             if(err){
                 done(err)
             }else{
                 if(doc){
-                    var valid = doc.comparePassword(password, doc.password);
-                    if(valid){
-                        done(null,{
-                            username : doc.username , 
-                            password : doc.password 
-                        })
-                    }else{
-                        done(null , false)
-                    }
-                    
+                    done(null,doc)
                 }else{
                     done(null,false)
                 }
