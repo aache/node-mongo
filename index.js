@@ -2,7 +2,8 @@ const express = require("express");
 const session = require("express-session");
 const app = express();
 const bodyParser = require('body-parser');
-const url = 'mongodb://localhost:27017/login';
+const MONGO_SETTINGS = require('./mongo-settings');
+const url = "mongodb://"+MONGO_SETTINGS.HOST+":"+MONGO_SETTINGS.PORT+"/"+MONGO_SETTINGS.DATABASE;
 const mongoose = require('mongoose');
 
 
